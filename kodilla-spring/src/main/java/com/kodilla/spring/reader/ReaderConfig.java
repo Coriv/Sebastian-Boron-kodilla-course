@@ -14,13 +14,14 @@ public class ReaderConfig {
     @Qualifier("book1")
     Book book;
 
+
     @Bean
     public Reader getReader() {
         return new Reader(book);
     }
 
     @Bean(name = "book1")
-    @Scope("prototype")
+    @Scope()
     public Book getBookOne() {
         return new Book("The book number one");
     }
