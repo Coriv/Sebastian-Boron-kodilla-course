@@ -35,7 +35,7 @@ public class DbMengerTestSuite {
         }
         rs.close();
         statement.close();
-        assertEquals(5, counter);
+        assertEquals(6, counter);
     }
 
     @Test
@@ -55,7 +55,47 @@ public class DbMengerTestSuite {
             System.out.println(rs.getString("FIRSTNAME") + ", " + rs.getString("LASTNAME"));
             counter++;
         }
+        statement.close();
+        rs.close();
 
         assertEquals(2, counter);
     }
+
+    @Test
+    void testAddingNewRecordToDatabase() throws SQLException {
+
+        DbManager dbManager = DbManager.getInstance();
+
+        String sqlInsert = "INSERT INTO USERS (ID, FIRSTNAME, LASTNAME)" +
+                                " VALUES (6, \"Sebastian\", \"Boron\")";
+
+        String sqlQueryGet = "SELECT FIRSTNAME, LASTNAME FROM USERS" +
+                             " WHERE FIRSTNAME = \"Sebastian\" AND LASTNAME = \"Boron\"";
+
+        Statement statement = dbManager.getConnection().createStatement();
+
+        dbManager.getConnection().setAutoCommit(false);
+
+        try {
+            statement.execute(sqlInsert);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        dbManager.getConnection().commit();
+
+        ResultSet rsGet = statement.executeQuery(sqlQueryGet);
+
+        int counter = 0;
+        while (rsGet.next()) {
+            System.out.println(rsGet.getString("FIRSTNAME") + " " + rsGet.getNString("LASTNAME"));
+            counter++;
+        }
+
+        statement.close();
+        rsGet.close();
+
+        assertEquals(1, counter);
+    }
 }
+
