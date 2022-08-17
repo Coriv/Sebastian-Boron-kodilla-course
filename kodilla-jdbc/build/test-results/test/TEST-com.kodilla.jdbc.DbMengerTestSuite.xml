@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.jdbc.DbMengerTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-17T17:12:53" hostname="mbp-sebastian.home" time="0.086">
+  <properties/>
+  <testcase name="testSelectUsersAndPosts()" classname="com.kodilla.jdbc.DbMengerTestSuite" time="0.086"/>
+  <system-out><![CDATA[John, Smith
+Zachary, Lee
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

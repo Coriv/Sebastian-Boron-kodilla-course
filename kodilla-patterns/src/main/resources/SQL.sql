@@ -1,0 +1,15 @@
+INSERT INTO POSTS (USER_ID, BODY)
+VALUES (5, "Hi, its my training post!");
+
+COMMIT;
+
+UPDATE POSTS
+SET BODY = "To delete"
+WHERE ID = 10;
+
+COMMIT ;
+
+DELETE FROM POSTS
+WHERE ID = 10;
+
+COMMIT ;
