@@ -9,6 +9,7 @@ public enum Logger {
         System.out.println("Log: [" + log + "]");
     }
 
+
     public String getLastLog() {
         return lastLog;
     }
