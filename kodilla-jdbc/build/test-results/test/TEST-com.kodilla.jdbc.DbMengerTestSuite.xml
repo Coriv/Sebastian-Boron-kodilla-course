@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.jdbc.DbMengerTestSuite" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-08-17T18:19:30" hostname="mbp-sebastian.home" time="0.114">
+<testsuite name="com.kodilla.jdbc.DbMengerTestSuite" tests="4" skipped="0" failures="0" errors="0" timestamp="2022-08-20T11:01:45" hostname="MBP-Sebastian.home" time="0.108">
   <properties/>
-  <testcase name="testAddingNewRecordToDatabase()" classname="com.kodilla.jdbc.DbMengerTestSuite" time="0.107"/>
-  <testcase name="testConnect()" classname="com.kodilla.jdbc.DbMengerTestSuite" time="0.001"/>
-  <testcase name="testSelectUsersAndPosts()" classname="com.kodilla.jdbc.DbMengerTestSuite" time="0.002"/>
+  <testcase name="testAddingNewRecordToDatabase()" classname="com.kodilla.jdbc.DbMengerTestSuite" time="0.101"/>
+  <testcase name="testConnect()" classname="com.kodilla.jdbc.DbMengerTestSuite" time="0.0"/>
+  <testcase name="testSelectUsersAndPosts()" classname="com.kodilla.jdbc.DbMengerTestSuite" time="0.001"/>
   <testcase name="testSelectUser()" classname="com.kodilla.jdbc.DbMengerTestSuite" time="0.004"/>
   <system-out><![CDATA[Sebastian Boron
 John, Smith
@@ -20,7 +20,7 @@ Zachary, Lee
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
 	at com.mysql.cj.jdbc.StatementImpl.executeInternal(StatementImpl.java:763)
 	at com.mysql.cj.jdbc.StatementImpl.execute(StatementImpl.java:648)
-	at com.kodilla.jdbc.DbMengerTestSuite.testAddingNewRecordToDatabase(DbMengerTestSuite.java:80)
+	at com.kodilla.jdbc.DbMengerTestSuite.testAddingNewRecordToDatabase(DbMengerTestSuite.java:81)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)

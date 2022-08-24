@@ -50,6 +50,7 @@ public class DbMengerTestSuite {
         Statement statement = dbManager.getConnection().createStatement();
         ResultSet rs = statement.executeQuery(sqlQuery);
 
+
         int counter = 0;
         while(rs.next()) {
             System.out.println(rs.getString("FIRSTNAME") + ", " + rs.getString("LASTNAME"));
