@@ -10,6 +10,7 @@ import java.util.List;
 public class Invoice {
 
     private int id;
+    private List<Integer> dd;
     private String number;
     private List<Item> items = new ArrayList<>();
 
@@ -28,9 +29,7 @@ public class Invoice {
         return id;
     }
 
-    private void setId(int id) {
-        this.id = id;
-    }
+    private void setId(int id) {this.id = id;}
 
     @Column(name = "NUMBER")
     public String getNumber() {

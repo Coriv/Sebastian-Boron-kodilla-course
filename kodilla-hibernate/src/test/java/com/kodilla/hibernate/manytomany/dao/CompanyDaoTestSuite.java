@@ -5,6 +5,7 @@ import com.kodilla.hibernate.manytomany.Employee;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -13,6 +14,9 @@ class CompanyDaoTestSuite {
 
     @Autowired
     private CompanyDao companyDao;
+
+    @Autowired
+    private EmployeeDao employeeDao;
 
     @Test
     void testSaveManyToMany() {
@@ -49,6 +53,13 @@ class CompanyDaoTestSuite {
         assertNotEquals(0, softwareMachineId);
         assertNotEquals(0, dataMaestersId);
         assertNotEquals(0, greyMatterId);
+
+
+        List<Company> companies = companyDao.getCompanyByName("Gr%");
+        assertEquals(1, companies.size());
+
+        List<Employee> employees = employeeDao.getByLastname("Kovalsky");
+        assertEquals(1, employees.size());
 
         //CleanUp
         try {
