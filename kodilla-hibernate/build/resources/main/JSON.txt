@@ -1,0 +1,22 @@
+{
+"name":"Porsche",
+"type":"Panamera",
+"chairs":[
+    "chair":{
+        "material":"leather",
+        "color":"black"
+    },
+    "chair":{
+        "material":"leather",
+        "color":"black"
+    },
+    "chair":{
+        "material":"leather",
+        "color":"black"
+    }
+    "chair":{
+        "material":"leather",
+        "color":"black"
+    }],
+ "engineCapacity":3996
+}

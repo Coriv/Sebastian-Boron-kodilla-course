@@ -1,7 +1,4 @@
-import com.kodilla.sudoku.DataInput;
 import com.kodilla.sudoku.SudokuBoard;
-import com.kodilla.sudoku.SudokuElement;
-import com.kodilla.sudoku.SudokuGame;
 import org.junit.jupiter.api.Test;
 
 public class SudokuTestSuite {
@@ -9,7 +6,6 @@ public class SudokuTestSuite {
     @Test
     void deepCloneBoardTest() throws CloneNotSupportedException {
         SudokuBoard sudokuBoard = new SudokuBoard();
-        SudokuGame.sedData2(sudokuBoard);
 
         System.out.println(sudokuBoard);
 
@@ -20,19 +16,14 @@ public class SudokuTestSuite {
         System.out.println();
         System.out.println("TEST~Y!");
 
-        DataInput.setValueOnBoard(sudokuBoard,1,1,8);
+        sudokuBoard.setValueOnBoard(1,1,8);
         System.out.println(sudokuBoard);
 
-
-
         System.out.println(deepCopy);
-        DataInput.setValueOnBoard(deepCopy, 9,9,9);
+         deepCopy.setValueOnBoard( 9,9,9);
 
         System.out.println(sudokuBoard);
         System.out.println(deepCopy);
-
-
-
     }
 }
 

@@ -1,19 +1,14 @@
 package com.kodilla.sudoku;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Resolver {
     private int number;
-    private int i = 0;
+    static List<BackTrack> backTracksList1 = new ArrayList<>();
     int progress = 0;
-    private Set<Integer> usedValues;
-
-    private List<BackTrack> backTrackList = new ArrayList<>();
-    void resolve(SudokuBoard sudokuBoard) throws Exception {
+    public boolean resolve(SudokuBoard sudokuBoard) throws NoAnyOptionException, CloneNotSupportedException {
+        Set<Integer> usedValues;
 
         do {
             for (SudokuRow sudokuRow : sudokuBoard.getBoardRowList()) {
@@ -34,7 +29,6 @@ public class Resolver {
                         Integer valueToRemoveRow = insideRowElement.getValue();
                         usedValues.add(valueToRemoveRow);
                         element.getListOfPossibilities().remove(valueToRemoveRow);
-
                     }
 
                     for (SudokuElement se : createColumn(elementIndex, sudokuBoard)) {
@@ -57,26 +51,23 @@ public class Resolver {
                     neighbourFields.addAll(squares);
                     neighbourFields.remove(element);
 
-                    System.out.println(element);
-
                     if (element.getListOfPossibilities().size() == 1 ) {
                         element.setValue(element.getListOfPossibilities().get(0));
-                        System.out.println("Size 1: " + element.getListOfPossibilities().get(0));
                     }
                     if (isPossibleSomewhereElse(element, neighbourFields)) {
                         element.setValue(number);
-                        System.out.println("Second option " + elementIndex + " " + rowIndex + " " + number);
                     }
-                    if(element.getListOfPossibilities().size() == 1 && usedValues.contains(element.getListOfPossibilities().get(0))) {
-                        throw new Exception();
+                    if(element.getListOfPossibilities().size() == 0) {
+                        throw new NoAnyOptionException();
+
                     }
                 }
             }
-            i++;
         } while (isSolved(sudokuBoard));
+        return true;
     }
 
-    boolean isSolved(SudokuBoard sudokuBoard) throws CloneNotSupportedException {
+    boolean isSolved(SudokuBoard sudokuBoard) throws CloneNotSupportedException, NoAnyOptionException{
         boolean isSolved = false;
         int emptyFields = 0;
         List<SudokuElement> fullList = sudokuBoard.getBoardRowList().stream()
@@ -89,14 +80,13 @@ public class Resolver {
                 emptyFields++;
             }
         }
-        if(progress == emptyFields) {
-            System.out.println("WE PREDICT");
+        if(progress == emptyFields && emptyFields != 0) {
             predictSomething(sudokuBoard);
         }
         progress = emptyFields;
         return isSolved;
     }
-    public void predictSomething(SudokuBoard sudokuBoard) throws CloneNotSupportedException{
+    public void predictSomething(SudokuBoard sudokuBoard) throws CloneNotSupportedException, NoAnyOptionException{
 
         SudokuElement sudokuElement;
         int randomRow;
@@ -108,25 +98,15 @@ public class Resolver {
 
             SudokuRow sudokuRow = sudokuBoard.getBoardRowList().get(randomRow);
             sudokuElement = sudokuRow.getFieldsOnRowList().get(randomField);
-            System.out.println(sudokuElement.getListOfPossibilities());
         } while (sudokuElement.getValue() != SudokuElement.EMPTY);
 
             int randomIndex = (int) (sudokuElement.getListOfPossibilities().size() * Math.random());
             Integer valueToFill = sudokuElement.getListOfPossibilities().get(randomIndex);
 
             BackTrack backTrack1 = new BackTrack(sudokuBoard.deepCopy(), randomRow, randomField, valueToFill);
-            backTrackList.add(backTrack1);
+            backTracksList1.add(backTrack1);
 
-        System.out.println("We add value: " + valueToFill + " do the field:  " + randomRow + " " + randomField);
             sudokuElement.setValue(valueToFill);
-
-            try {
-                resolve(sudokuBoard);
-            } catch (Exception e) {
-                sudokuElement.setValue(SudokuElement.EMPTY);
-                sudokuElement.getListOfPossibilities().remove(valueToFill);
-                System.out.println("EXCEPTATIOOON!!! ");
-            }
 
         }
 
@@ -139,7 +119,6 @@ public class Resolver {
                 .collect(Collectors.toList());
 
         possibilities.removeAll(dd);
-        System.out.println(possibilities);
         if (possibilities.size() ==1) {
             doesItOccur = true;
             number = possibilities.get(0);

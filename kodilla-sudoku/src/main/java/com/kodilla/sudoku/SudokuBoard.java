@@ -48,4 +48,10 @@ public class SudokuBoard extends Prototype<SudokuBoard> {
         }
         return cloneBoard;
     }
+
+    public void setValueOnBoard(int x, int y,   int value) {
+        SudokuRow sudokuRow = this.boardRowList.get(x-1);
+        SudokuElement sudokuElement = sudokuRow.getFieldsOnRowList().get(y-1);
+        sudokuElement.setValue(value);
+    }
 }
