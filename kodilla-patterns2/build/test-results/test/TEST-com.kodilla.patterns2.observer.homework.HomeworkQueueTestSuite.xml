@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns2.observer.homework.HomeworkQueueTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-19T14:06:35" hostname="MBP-Sebastian.home" time="0.03">
+  <properties/>
+  <testcase name="addingNewTaskToQueueTest()" classname="com.kodilla.patterns2.observer.homework.HomeworkQueueTestSuite" time="0.03"/>
+  <system-out><![CDATA[You have new task to verify: Facade pattern/nFrom student: Mark Kovalsky
+In total task to check: 1
+You have new task to verify: Observer pattern/nFrom student: Mark Kovalsky
+In total task to check: 2
+You have new task to verify: Facade pattern/nFrom student: Pawel Zaorski
+In total task to check: 1
+You have new task to verify: Decorator pattern/nFrom student: Pawel Zaorski
+In total task to check: 2
+You have new task to verify: Aspect Oriented Programming/nFrom student: Pawel Zaorski
+In total task to check: 3
+You have new task to verify: Observer pattern/nFrom student: Pawel Zaorski
+In total task to check: 4
+You have new task to verify: Decorator pattern/nFrom student: Ewelina Krychowiak
+In total task to check: 1
+You have new task to verify: Facade pattern/nFrom student: Ewelina Krychowiak
+In total task to check: 2
+You have new task to verify: Observer pattern/nFrom student: Ewelina Krychowiak
+In total task to check: 3
+You have new task to verify: Facade pattern/nFrom student: Eliza Mogala
+In total task to check: 1
+You have new task to verify: Aspect Oriented Programming/nFrom student: Eliza Mogala
+In total task to check: 2
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
