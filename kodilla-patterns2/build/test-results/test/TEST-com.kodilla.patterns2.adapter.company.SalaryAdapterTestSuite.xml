@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kodilla.patterns2.adapter.company.SalaryAdapterTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-11-20T12:48:42" hostname="MBP-Sebastian.home" time="0.013">
+  <properties/>
+  <testcase name="testTotalSalary()" classname="com.kodilla.patterns2.adapter.company.SalaryAdapterTestSuite" time="0.013"/>
+  <system-out><![CDATA[Employee{peselId=67032906720', firstname='John', lastname='Smith', baseSalary=4500}
+Employee{peselId=62081612187', firstname='Ivone', lastname='Novak', baseSalary=3700}
+Employee{peselId=75021310799', firstname='Jessie', lastname='Pinkman', baseSalary=4350}
+Employee{peselId=75012200766', firstname='Walter', lastname='White', baseSalary=9000}
+Employee{peselId=75073006831', firstname='Clara', lastname='Lanson', baseSalary=6200}
+27750.0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

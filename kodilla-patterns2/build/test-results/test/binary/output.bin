@@ -1,22 +1,6 @@
-IYou have new task to verify: Facade pattern/nFrom student: Mark Kovalsky
-In total task to check: 1
-KYou have new task to verify: Observer pattern/nFrom student: Mark Kovalsky
-In total task to check: 2
-IYou have new task to verify: Facade pattern/nFrom student: Pawel Zaorski
-In total task to check: 1
-LYou have new task to verify: Decorator pattern/nFrom student: Pawel Zaorski
-In total task to check: 2
-VYou have new task to verify: Aspect Oriented Programming/nFrom student: Pawel Zaorski
-In total task to check: 3
-KYou have new task to verify: Observer pattern/nFrom student: Pawel Zaorski
-In total task to check: 4
-QYou have new task to verify: Decorator pattern/nFrom student: Ewelina Krychowiak
-In total task to check: 1
-NYou have new task to verify: Facade pattern/nFrom student: Ewelina Krychowiak
-In total task to check: 2
-PYou have new task to verify: Observer pattern/nFrom student: Ewelina Krychowiak
-In total task to check: 3
-HYou have new task to verify: Facade pattern/nFrom student: Eliza Mogala
-In total task to check: 1
-UYou have new task to verify: Aspect Oriented Programming/nFrom student: Eliza Mogala
-In total task to check: 2
+TEmployee{peselId=67032906720', firstname='John', lastname='Smith', baseSalary=4500}
+UEmployee{peselId=62081612187', firstname='Ivone', lastname='Novak', baseSalary=3700}
+XEmployee{peselId=75021310799', firstname='Jessie', lastname='Pinkman', baseSalary=4350}
+VEmployee{peselId=75012200766', firstname='Walter', lastname='White', baseSalary=9000}
+VEmployee{peselId=75073006831', firstname='Clara', lastname='Lanson', baseSalary=6200}
+27750.0
