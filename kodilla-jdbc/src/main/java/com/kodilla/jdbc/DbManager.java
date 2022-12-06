@@ -13,12 +13,12 @@ public enum DbManager {
     DbManager() {
         Properties connectionProps = new Properties();
         connectionProps.put("user", "kodilla_user");
-        connectionProps.put("password", "kodilla_Pass123");
+        connectionProps.put("password", "kodilla_password");
             try {
                 conn = DriverManager.getConnection(
                         "jdbc:mysql://localhost:3306/kodilla_course" +
                                 "?serverTimezone=Europe/Warsaw" +
-                                "&useSSL=False",
+                                "&allowPublicKeyRetrieval=true&useSSL=False",
                         connectionProps);
             } catch (SQLException e) {
                 throw new ExceptionInInitializerError(e);
