@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.kodilla.jdbc.StoredProcTestSuite" tests="2" skipped="0" failures="0" errors="0" timestamp="2022-12-06T18:59:28" hostname="MBP-Sebastian" time="0.109">
+<testsuite name="com.kodilla.jdbc.StoredProcTestSuite" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-12-06T19:06:29" hostname="MBP-Sebastian" time="0.095">
   <properties/>
-  <testcase name="testUpdateVip()" classname="com.kodilla.jdbc.StoredProcTestSuite" time="0.105"/>
-  <testcase name="testUpdateBestsellers()" classname="com.kodilla.jdbc.StoredProcTestSuite" time="0.003"/>
+  <testcase name="testUpdateBestsellers()" classname="com.kodilla.jdbc.StoredProcTestSuite" time="0.095"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
